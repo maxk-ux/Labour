@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WA Labour Hire — People • Safety • Delivery</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#"><img src="assets/WA_LabourHire_Logo_Primary.svg" alt="WA Labour Hire logo"></a>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="roles.html">Roles</a>
+      <a href="locations.html">Locations</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#contact" class="btn">Request Quote</a>
+    </nav>
+    <button class="menu" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>People • Safety • Delivery</h1>
+    <p>Trusted labour hire across Western Australia — construction, mining, logistics, and care.</p>
+    <div class="cta">
+      <a href="#contact" class="btn primary">Book Workers</a>
+      <a href="roles.html" class="btn ghost">View Roles</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2>What We Do</h2>
+    <div class="grid3">
+      <div class="card"><h3>Construction</h3><p>Bricklayers, concreters, ceiling fixers, electricians, HSE.</p></div>
+      <div class="card"><h3>Mining & Civil</h3><p>Diesel mechanics, plant operators, shutdown crews.</p></div>
+      <div class="card"><h3>Transport & Warehousing</h3><p>MC/HC/HR drivers, forklift ops, pick/pack teams.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="roles" class="section alt">
+  <div class="container">
+    <h2>In-Demand Roles</h2>
+    <ul class="roles">
+      <li>Bricklayer • Concreter • Ceiling & Wall Fixer</li>
+      <li>Electrician • Diesel Mechanic • Welder / Boilermaker</li>
+      <li>Plant Operator (Excavator/Loader/Roller) • Truck Driver (HR/HC/MC)</li>
+      <li>Forklift Operator / Warehouse Picker</li>
+      <li>NDIS Support Worker • Aged Care Personal Care Worker • HSE Advisor</li>
+    </ul>
+    <p>Need something specific? <a href="#contact">Tell us your requirements</a>.</p>
+  </div>
+</section>
+
+<section id="compliance" class="section">
+  <div class="container">
+    <h2>Compliance & Safety</h2>
+    <div class="grid2">
+      <div>
+        <h3>Fully Vetted Workers</h3>
+        <p>White Cards, HRWL tickets, VOCs, medicals, and police checks as required.</p>
+      </div>
+      <div>
+        <h3>Award‑Aligned</h3>
+        <p>We pay correctly under applicable Awards/EBAs and price transparently.</p>
+      </div>
+    </div>
+    <p class="small">Ask for our Master Pack for role-by-role qualifications and pay frameworks.</p>
+  </div>
+</section>
+
+<section id="calculator" class="section">
+  <div class="container">
+    <h2>Live Rate Calculator</h2>
+    <p>Upload a CSV exported from Excel or enter values below. <a href="assets/chargeout_template.csv" download>Download CSV template</a>.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Upload CSV / Excel</h3>
+        <input type="file" id="csvInput" accept=".csv">
+        <div id="csvResult" class="small" style="margin-top:10px;"></div>
+      </div>
+      <div class="card">
+        <h3>Manual Entry</h3>
+        <div class="form-row">
+          <label>Occupation<input id="occ" type="text" placeholder="Bricklayer"></label>
+          <label>Base Pay $/hr<input id="base" type="number" step="0.01" placeholder="47.50"></label>
+        </div>
+        <div class="form-row">
+          <label>Super %<input id="super" type="number" step="0.1" value="12"></label>
+          <label>Workers Comp %<input id="wc" type="number" step="0.1" value="2"></label>
+        </div>
+        <div class="form-row">
+          <label>Payroll Tax %<input id="pt" type="number" step="0.1" value="5.5"></label>
+          <label>Overheads %<input id="oh" type="number" step="0.1" value="10"></label>
+        </div>
+        <div class="form-row">
+          <label>Margin %<input id="mg" type="number" step="0.1" value="20"></label>
+          <label>—<input disabled placeholder=" "></label>
+        </div>
+        <button class="btn primary" id="calcBtn" type="button">Calculate</button>
+        <div id="calcOut" class="small" style="margin-top:10px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <form class="form" onsubmit="return false;" id="msForm">
+      <div class="form-row step step-1">
+        <label>Company Name<input required type="text" placeholder="Company Pty Ltd"></label>
+        <label>Contact Name<input required type="text" placeholder="Your name"></label>
+      </div>
+      <div class="form-row step step-1">
+        <label>Email<input required type="email" placeholder="name@example.com"></label>
+        <label>Phone<input required type="tel" placeholder="04xx xxx xxx"></label>
+      </div>
+      <div class="step step-2">
+        <label>Role(s) Needed<textarea id="rolesNeeded" rows="4" placeholder="e.g., 2 bricklayers for 4 weeks from 15 Sep" required></textarea></label>
+        <div class="form-row">
+          <label>Start Date<input id="startDate" type="date" required></label>
+          <label>Location<input id="location" type="text" placeholder="e.g., Wangara, WA" required></label>
+        </div>
+        <div class="form-row">
+          <button class="btn ghost" id="prevBtn" type="button">Back</button>
+          <button class="btn primary" type="submit" id="sendBtn">Submit Request</button>
+        </div>
+      </div>
+    </form>
+    <p class="small">Prefer email? Send requirements to <a href="mailto:hello@walabourhire.com">hello@walabourhire.com</a>.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <img src="assets/WA_LabourHire_Logo_Mark.png" alt="WA Labour Hire mark" class="footmark">
+    <p>© 2025 WA Labour Hire • Built for Brook Lovelace Property</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
